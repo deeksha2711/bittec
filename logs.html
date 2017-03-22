@@ -1,0 +1,71 @@
+<div id="page-wrapper">
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-xs-12 text-center" >
+                                <div class="table-responsive">	
+                                    <table class="table table-bordered" id="history_table" >
+                                        <thead class="t_head">
+                                            <tr class="t-head">
+                                                <th></th>
+                                                <th class="t_item">Country  Name</th>
+                                                <th class="t_item">Account Holder</th>
+                                                <th  class="t_item">Total Camera</th>
+                                                <th  class="t_item">Working</th>
+                                                <th  class="t_item">Non Working</th>
+                                                <th  class="t_item">Alarm</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  style="background-color:#d8e4ed5e;" id="history_table">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+<script>
+
+                        $('.tbl-accordion-nested').each(function () {
+                            var thead = $(this).find('thead');
+                            var tbody = $(this).find('tbody');
+
+                            tbody.hide();
+                            thead.click(function () {
+                                tbody.slideToggle();
+                            })
+                        })
+                       
+
+                        $('.faq-links').click(function () {
+                            debugger;
+                            $(this).find('i').toggleClass('fa fa-plus-circle fa-2x fa fa-minus-circle fa-2x').css("color", "white")
+
+                            $("#table_detail").toggle();
+                        });
+                        $('.faq-link_1').click(function () {
+                            debugger;
+                            $(this).find('i').toggleClass('fa fa-plus-circle fa-2x fa fa-minus-circle fa-2x').css("color", "white")
+
+                            $("#table_detail_1").toggle();
+                        });
+
+                        $(document).ready(function () {
+                            function disableBack() {
+                                window.history.forward()
+                            }
+                            window.onload = disableBack();
+                            window.onpageshow = function (evt) {
+                                if (evt.persisted)
+                                    disableBack()
+                            }
+                        });
+
+                </script>
+                <script>
+                    $(document).ready(function () {
+
+                        session();
+                        home();
+
+                    });
+
+                </script>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!-- Meta, title, CSS, favicons, etc. -->
+        <meta charset="utf-8">
+        <meta http-equiv="cache-control" content="no-cache" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NetGear Arlo </title>
+        <link href="images/arlo.png" rel="shortcut icon"> 
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Custom -->
+        <link href="css/custom.min.css" rel="stylesheet">
+        <!-- Green -->
+        <link href="css/green.css" rel="stylesheet">
+        <!-- Daterange Picker-->
+        <link href="css/daterangepicker.css" rel="stylesheet">
+        <!-- Table -->
+        <link href="css/table.css" rel="stylesheet">
+        <!-- bootstrap multiselect checkboxes-->
+        <link href="css/bootstrap-multiselect.css"  rel="stylesheet" type="text/css" />
+        <link href="css/index.css" rel="stylesheet">
+        <!-- Datatable-->
+        <link href="css/jquery.dataTables.css" rel="stylesheet">
+        <link href="css/dataTables.bootstrap.css" rel="stylesheet"> 
+        <link href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css" rel="stylesheet"> 
+    </head>
+
+
+    <body class="nav-md">
+        <div class="container body">
+            <div class="main_container">
+                <div class="col-md-3 left_col">
+                    <div class="left_col scroll-view">
+                        <div class="navbar nav_title" style="border: 0;">
+                            <a href="index.html" class="site_title"><span>NetGear Arlo</span></a>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <!-- menu profile quick info -->
+                        <div class="profile">
+                            <div class="profile_pic">
+                                <img src="images/arlo.png" alt="..." class="img-circle profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <span>Welcome,</span>
+                                <h2>NetGear Arlo</h2>
+                            </div>
+                        </div>
+                        <!-- /menu profile quick info -->
+
+                        <br />
+
+                        <!-- sidebar menu -->
+                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                            <div class="menu_section">
+                                <!--                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                                </div>-->
+                                <h3>NETGEAR</h3>
+                                <ul class="nav side-menu">
+                                    <li class="index"><a href="index.html" onclick="location.href = 'index.html';"><i class="fa fa-tachometer "></i> Dashboard <span class="fa fa-chevron-down"></span></a>
+                                    </li>
+                                    <li class="logs">
+                                        <a id="logs" href="#" onclick="LoadAjaxContent('logs', 'logs.html');"><i class="fa fa-home"></i> Events (12 Hrs) <span class="fa fa-chevron-down"></span></a>
+                                    </li>
+                                    <li class="report"><a id="report" href="#" onclick="LoadAjaxContent('report', 'report.html');"><i class="fa fa-table"></i> Report <span class="fa fa-chevron-down"></span></a>
+                                    </li>
+                                    <li class="help"><a id="help" href="#" onclick="LoadAjaxContent('help', 'help.html');"><i class="fa fa-question-circle"></i> Help <span class="fa fa-chevron-down"></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /sidebar menu -->
+
+                        <!-- /menu footer buttons -->
+                        <div class="sidebar-footer">
+
+                            <a id="giveColor" data-toggle="tooltip" data-placement="top" title="Logout" onclick="logOut();">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                            </a>
+                        </div>
+                        <!--                        <div class="sidebar-foot hidden-lg hidden-sm">
+                        
+                                                    <a id="giveColor" data-toggle="tooltip" data-placement="top" title="Logout" onclick="logOut();">
+                                                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                                                    </a>
+                                                </div>-->
+                        <!-- /menu footer buttons -->
+                    </div>
+                </div>
+
+                <!-- top navigation -->
+                <div class="top_nav">
+                    <div class="nav_menu">
+                        <nav>
+                            <div class="nav toggle">
+                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                            </div>
+
+                            <ul class="nav navbar-nav navbar-right">
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /top navigation -->
+
+                <!-- page content -->
+                <div class="right_col" role="main">
+                    <!-- top tiles -->
+                    <div id="page-wrapper">
+
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-xs-12 text-center" >
+                                <div class="table-responsive">	
+                                    <table class="table table-bordered" id="dash_table" >
+                                        <thead class="t_head">
+                                            <tr class="t-head">
+
+                                                <th class="t_item">Location</th>
+                                                <th class="t_item">Camera ID</th>
+                                                <th  class="t_item">Live Playback</th>
+                                                <th  class="t_item">Screenshot</th>
+                                                <th  class="t_item">Video Record</th>
+                                                <th  class="t_item">CVR Lag/Video Playback</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  style="background-color:#d8e4ed5e;" id="dashboard_table">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+
+                <!-- jQuery -->
+                <script src="js/jquery-1.12.3.js"></script>
+                <script src="js/jquery.min.js"></script>
+                <!-- Bootstrap -->
+                <script src="js/bootstrap.min.js"></script>
+                <!-- Highcharts -->
+                <script src="js/Highcharts-4.2.5/js/highcharts.js"></script>
+                <script src="js/Highcharts-4.2.5/js/modules/exporting.js"></script>
+                <script src="js/login.js"></script>
+                <!-- Chart.js -->
+                <script src="js/Chart.min.js"></script>
+                <!-- DateJS -->
+                <script src="js/date.js"></script>
+                <script src="js/moment/moment.min.js"></script>
+                <!-- Custom Theme Scripts -->
+                <script src="js/custom.min.js"></script>
+                <!--        bootstrap multiselect checkboxes-->
+                <script src="js/bootstrap-multiselect.js"></script>
+                <script src="js/daterangepicker.js"></script>
+                <script src="http://cdnjs.cloudflare.com/ajax/libs/jspdf/0.9.0rc1/jspdf.min.js"></script> 
+                <script src="js/jquery.dataTables.js"></script> 
+                <script src="js/jquery.dataTables.min.js"></script> 
+                <!--<script src="js/dataTables.bootstrap.js"></script> -->
+                <!--                            <script src="js/dataTables.rowsGroup.js"></script>-->
+                <script src="https://cdn.datatables.net/buttons/1.2.2/js/dataTables.buttons.min.js"></script>
+                <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
+                <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
+                <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.html5.min.js"></script>
+                <script src="js/bootbox.js"></script>
+                <script src="js/report.js"></script>
+                <script src="js/canvasjs.min.js"></script>
+                <script src="js/jquery.blockUI.js"></script>
+                <script>
+
+                                $(document).ready(function () {
+                                    var fileLocation = location.href;
+                                    var fileLocation_index = fileLocation.indexOf("#");
+                                    var fileName = fileLocation.slice(fileLocation_index + 1, fileLocation.length);
+
+                                    if (fileName == "logs") {
+                                        LoadAjaxContent("logs", "logs.html");
+
+                                    }
+                                    if (fileName == "report") {
+                                        LoadAjaxContent("report", "report.html");
+                                        //UpdateProfile();
+                                    }
+                                    if (fileName == "help") {
+                                        LoadAjaxContent("help", "help.html");
+
+                                    }
+                                });
+                                function LoadAjaxContent(id, page)
+                                {
+                                    $(this).scrollTop(0);
+                                    document.location.hash = id;
+                                    $(".side-menu").scrollTop(0);
+                                    $.ajax({
+                                        url: page,
+                                        type: 'GET',
+                                        success: function (result)
+
+                                        {
+
+                                            $('.right_col').html(result);
+                                               document.location.hash = id;
+                                            // $(' #page-wrapper').html(result);
+                                        },
+                                        error: function ()
+                                        {
+                                            if (id == 'help')
+                                            {
+                                                $(".help").addClass('active');
+                                                $(".logs,.report,.index").removeClass('active');
+                                            }
+                                            bootbox.alert("There may be some network issue, please try again!!");
+
+                                        },
+                                    });
+                                }
+                </script>
+                <script>
+                    $(document).ready(function () {
+                        session();
+                        dashboard();
+                    });
+
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

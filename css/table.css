@@ -1,0 +1,68 @@
+#example th
+{
+    background-color: #4caf50;  
+    color:white;
+}
+.tableBottom th {
+    border: 1px solid #ddd;
+    border-collapse: collapse;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.tableBottom td {
+    border: 1px solid #ddd;
+    color:black;
+    border-collapse: collapse;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.dataTables_length label
+{
+    margin-left: 0px !important;
+}
+#example_filter  label
+{
+    margin-bottom: 20px !important;
+}
+#example_wrapper .dt-buttons .buttons-html5
+{
+    margin-left: 45px !important;
+} 
+
+.t_head
+{
+    background:green;
+    color:white;
+}
+.color_icon
+{
+
+    color:white;
+}
+.text_center
+{
+    text-align: start;
+}
+td.details-control {
+    background: url('../resources/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.shown td.details-control {
+    background: url('../resources/details_close.png') no-repeat center center;
+}
+.t_item
+{
+    text-align: center;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+.camera
+{
+    border: 1px solid grey;
+    background-color: #4caf50;
+    color: white;
+}
+#deviceOverflow
+{
+    overflow-y: auto;
+}

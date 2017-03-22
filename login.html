@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Netgear Login</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Styles -->
+        <link href="images/arlo.png" rel="shortcut icon">
+
+        <link rel="stylesheet" href="css/jquery-ui.min.css"> 
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet">       
+        <link href="css/animate.min.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/login.css" media="screen" rel="stylesheet" type="text/css">
+    </head>
+    <body class="login"> 
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+
+                    <div class="account-wall">
+                        <span  id="setText"><b>NETGEAR ARLO AUTOMATION CLOUD</b></span>
+                        <img class="profile-img" src="images/arlo.png" alt="logo name">
+
+                        <form class="form-signin">
+
+                            <input type="text" class="form-control" id="email1" name="username" placeholder="UserName" required autofocus>
+
+                            <input type="password" class="form-control" id="pwd" name="password" placeholder="Password" required>
+
+
+                            <a class="btn btn-primary changecolor" onclick="LogIN();">Login</a>
+                            <!--                       
+                                                   
+                                                        <div style="text-align:center">
+                                                            <span id='forgotLink'  data-toggle="modal" data-target="#forgetPassword" data-whatever="@mdo"> 
+                                                                <a href="#"> Forgot Password?</a>
+                                                            </span>
+                                                        </div>-->
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- JAVASCRIPTS -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <!-- Scripts -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Bootstrap -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <!--        <script type="text/javascript" src="js/validation.js"></script>-->
+        <script type="text/javascript" src="js/bootbox.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+    </body>
+</html>

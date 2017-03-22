@@ -1,0 +1,158 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 24, 2016, 8:55:58 AM
+    Author     : Deeksha
+*/
+.form-signin
+{
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .form-signin-heading, .form-signin .checkbox
+{
+    margin-bottom: 10px;
+}
+.form-signin .checkbox
+{
+    font-weight: normal;
+}
+.form-signin .form-control
+{
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    padding: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.form-signin .form-control:focus
+{
+    z-index: 2;
+}
+.form-signin input[type="text"]
+{
+    margin-bottom: 30px;
+    margin-top: 25px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.form-signin input[type="password"]
+{
+    margin-bottom: 30px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.account-wall
+{
+    margin-top: 100px;
+    padding: 40px 0px 20px 0px;
+    background-color: #f7f7f7;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+.login-title
+{
+    color: #555;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+}
+.profile-img
+{
+    margin-top: 25px;
+    margin-left: 115px;
+    width: 96px;
+    height: 96px;
+    /* margin: 0 auto 0px; */
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    
+/*    
+    width: 96px;
+    height: 96px;
+    margin: 0 auto 10px;
+    display: block;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;*/
+}
+.need-help
+{
+    margin-top: 10px;
+}
+.new-account
+{
+    display: block;
+    margin-top: 10px;
+}
+.changecolor
+{
+    background-color: #4caf50;
+    width: 100%;
+    border-color: #4caf50;
+    
+}
+.changecolor:hover
+{
+  background-color: #4caf50;   
+}
+/*.login {
+    background: url("../images/images (2).jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 100%;
+    min-height: 100%;
+    
+}*/
+nav.navbar.navbar-inverse.navbar-fixed-top {
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.navbar-inverse .navbar-brand {
+    font-family: "Open sans", helvetica, arial;
+    font-size: 24px;
+    color: white;
+}
+/*p#rides_devivery {
+    font-size: 15px;
+    margin-top: 2px;
+    margin-left: 78px;
+}*/
+h2 {
+  text-align: center;
+}
+
+table caption {
+	padding: .5em 0;
+}
+/*
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}*/
+
+.p {
+  text-align: center;
+  padding-top: 140px;
+  font-size: 14px;
+}
+button.btn.btn-primary {
+    background-color: #4caf50 !important;
+}
+#setText{
+    text-align: center;
+    font-size: 16px;
+    color: #4caf50;
+    margin-left: 27px;
+}
+.account-wall {
+    border: 1px solid #4caf50;
+}

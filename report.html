@@ -1,0 +1,260 @@
+<!------    Page Wrapper------->
+<div id="page-wrapper">
+    <!-------Div row for email,zone,date------>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-xs-12">
+            <div class="col-sm-6 col-md-4 col-xs-6">
+                <div class="btn-group pull-left">
+                    <button class="btn btn-default" data-toggle="modal" data-target="#myModalHorizontal" onclick="hideContent();">
+                        <i class="fa fa-envelope"> <span> Email </span></i>
+                    </button>            
+                </div>
+            </div>
+            <div class="col-md-1 optionAligned">
+                <select id="location" multiple="multiple">
+
+                </select>
+            </div>
+            <div class="col-md-4 pull-right">
+                <input type="text" id="reportrange" name="daterange" value="01/01/2015 1:30 PM - 01/01/2015 2:00 PM" />
+                <button id="savedate" type="button" class="btn btn-primary" onclick="showReportSubmit();">Submit</button>
+            </div>
+        </div>
+    </div>
+    <!-------/Div row for email,zone,date------>
+    <br>
+    <!-------Div row for Reports,Alarms,Device------>
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12 toggleButton">
+            <div class="x_panel tile fixed_height_320 overflow_hidden">
+                <div class="x_title">
+                    <h2><i class="fa fa-bar-chart gapp"></i>Report</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link" ><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <table class="" style="width:100%">
+                        <tr>
+                            <td>
+                                <canvas id="canvas1" height="140" width="140" style="margin: 15px 10px 40px 60px"></canvas>
+                            </td> 
+                        </tr>
+                        <td>
+                            <table class="tile_info">
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square purple"></i>Working </p>
+                                    </td>
+                                    <td id="working"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square blue"></i>Non-working</p>
+                                    </td>
+                                    <td id="nonworking"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 toggleButton">
+            <div class="x_panel tile fixed_height_320 overflow_hidden">
+                <div class="x_title">
+                    <h2><i class="fa fa-bell gapp"></i>Alarms</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <table class="" style="width:100%">
+
+                        <tr>
+                            <td>
+                                <canvas id="canvas2" height="140" width="140" style="margin: 15px 10px 20px 60px"></canvas>
+                            </td> </tr>
+                        <td>
+                            <table class="tile_info">
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square purple"></i>Major </p>
+                                    </td>
+                                    <td id="major"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square blue"></i>Minor </p>
+                                    </td>
+                                    <td id="minor"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p><i class="fa fa-square red"></i>Critical </p>
+                                    </td>
+                                    <td id="critical"></td>
+                                </tr>
+
+                            </table>
+                        </td>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 toggleButton">
+            <div class="x_panel tile fixed_height_320 overflow_hidden">
+                <div class="x_title">
+                    <h2><i class="fa fa-camera gapp"></i>Device</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <table class="" style="width:100%">
+                        <tr>
+                            <td>
+                                <canvas id="canvas3" height="140" width="140" style="margin: 15px 10px 40px 60px"></canvas>
+                            </td> 
+                        </tr>
+                        <td>
+                            <div class="table-responsive" id="deviceOverflow">
+                                <table class="tile_info" id="devicesName">
+                                </table>
+                            </div>
+                        </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------/Div row for Reports,Alarms,Device------>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="x_panel tile">
+                <div class="x_title">
+                    <h2><i class="fa fa-camera gapp"></i>Camera Wise Report</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                    <div class="container" id="cameragraph" style="min-width: 310px; height: 250px; margin: 0 auto">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <br>
+    </div>
+    <div class="tableBottom table-responsive" id="pdfReport">
+        <table id="example" class="display" width="100%">
+        </table>
+    </div>
+</div>
+<!------ End Page Wrapper div------->
+
+<!------- Start Div For modal------------->
+<div class="modal fade" id="myModalHorizontal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-backdrop fade in" style="height: 716px;"></div>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <i class="fa fa-envelope"> <span> Email </span></i>
+            </div>
+
+            <!-- Modal Body -->
+            <div class="modal-body">       
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <h2  style="margin-left: 13px;">To
+                        </h2>                
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="User Email"/>
+                        </div>
+                    </div>
+                </form>                    
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="email();">
+                    Send
+                </button>
+            </div>
+            <!-- Modal Footer -->
+        </div>
+    </div>
+</div>
+<!------- End Div For modal------>
+
+<script>
+    $(function () {
+        var currDate = new Date();
+        var preDate = new Date();
+        var currHour = currDate.getHours();
+        var currMinutes = currDate.getMinutes();
+        var currDay = currDate.getDate();
+        var currMonth = currDate.getMonth();
+        var currYear = currDate.getFullYear();
+        var currAMPM = getAMPM(currHour);
+        preDate.setDate(preDate.getDate() - 1);
+        var prevHour = preDate.getHours();
+        var prevMinutes = preDate.getMinutes();
+        var prevDay = preDate.getDate();
+        var prevMonth = preDate.getMonth();
+        var prevYear = preDate.getFullYear();
+        var prevAMPM = getAMPM(prevHour);
+        $("#reportrange").val(prevYear + "/" + prevMonth + "/" + prevDay + " " + prevHour + ":" + prevMinutes + "" + prevAMPM - currYear + "/" + currMonth + "/" + currDay + " " + currHour + ":" + currMinutes + "" + currAMPM);
+
+        function getAMPM(getHour) {
+            var getHour = (getHour + 24 - 2) % 24;
+            return 'AM';
+            if (getHour == 0) { //At 00 hours we need to show 12 am
+                getHour = 12;
+            } else if (getHour > 12)
+            {
+                getHour = getHour % 12;
+                return 'PM';
+            }
+        }
+    });
+</script>
+<!--<script src="js/custom.min.js"></script>-->
+<script src="js/report.js"></script>
+<script>
+    $(document).ready(function () {
+        session();
+        data();
+        report();
+        $(".collapse-link").on("click", function() {
+            var e = $(this).closest(".x_panel"),
+            t = $(this).find("i"),
+            n = e.find(".x_content");
+            e.attr("style") ? n.slideToggle(200, function() {
+            e.removeAttr("style")
+            }) : (n.slideToggle(200), e.css("height", "auto")), t.toggleClass("fa-chevron-up fa-chevron-down")
+            }), $(".close-link").click(function() {
+            var e = $(this).closest(".x_panel");
+            e.remove()
+        });
+    });
+
+</script>

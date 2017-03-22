@@ -1,0 +1,200 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 27, 2016, 11:15:59 AM
+    Author     : Deeksha
+*/
+.highcharts-container .highcharts-button
+{
+    visibility:hidden !important;
+}
+.x_title
+{
+    background-color: #4caf50 !important;
+    color: white !important;
+    border-bottom: 0px !important;
+    margin-left: -17px;
+    margin-right: -17px;
+    margin-top: -10px;
+}
+.gapp
+{
+    margin-left: 10px;
+    margin-right: 14px;
+}
+.panel_toolbox 
+{
+    min-width: 0px !important;  
+}
+.x_panel
+{
+    border: 1px solid #4caf50;
+}
+.btn-default 
+{
+    background-color: white !important;
+}
+.tile_info
+{
+    margin-top: 0px !important;
+}
+.leftmargin
+{
+    margin-left: 55px !important;
+}
+#set_width
+{
+    width:14% !important;
+}
+.circleGraphic1,.circleGraphic2,.circleGraphic3,.circleGraphic4
+{
+    background-color: white;
+}
+.changeColor
+{
+    background-color: white;
+    color: black;  
+}
+.fa-plus-circle,.fa-minus-circle
+{
+    color: #4caf50;
+}
+
+td.camreport {
+    position: relative;
+}
+
+td.camreport:before {
+    position: absolute;
+    width: 98.10%;
+    height: 27px;
+    content: "";
+    background: #ffffff;
+    left: 8px;
+    top: 8px;
+    right: 8px;
+}
+
+.highcharts-legend {
+    display: none;
+}
+
+td.camreport .highcharts-container {
+    background: #fff;
+    overflow: visible !important;
+}
+
+td.camreport .highcharts-container svg:not(:root) {
+    overflow: visible !important;
+}
+
+input#reportrange {
+    padding: 8px 6px 5px;
+    border: 1px solid #adadad;
+    border-radius: 3px;
+}
+
+#example_filter input[type="search"] {
+    padding: 8px 6px 5px;
+    border: 1px solid #adadad;
+    border-radius: 3px;
+}
+
+div.dataTables_length select {
+    padding: 8px 6px 5px;
+    border: 1px solid #adadad;
+    border-radius: 3px;
+}
+
+.dataTables_wrapper {
+    padding-bottom: 30px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: green !important;
+    border: 1px solid green !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background-color: #ddd !important;
+    border: 1px solid #ddd !important;
+}
+.optionAligned
+{
+    margin-right: 222px;
+}
+#showText
+{
+    font-size: 14px;
+    margin-left: 120px;   
+}
+#changeBackgroundColor
+{
+    color:white;
+    background-color: #4caf50;
+}
+#deviceOverflow
+{
+    height:70px;
+}
+#devicesName{
+    overflow-y: auto;
+}
+#example_filter{
+    margin-top: -34px;
+}
+#setTextColour{
+    color:black;
+}
+#savedate {
+    color: #fff;
+    background-color: #4caf50;
+    border-color: #4caf50;
+}
+#giveColor{
+    color: white;
+}
+/*.active{
+    border-right:5px solid #1ABB9C;
+}*/
+.preloader4 {
+    display: none;
+    height: 136px;
+    top: 10%;
+    left: 62%;
+    text-align: center;
+    padding: 10px;
+    margin-left: -62px;
+    margin-top: 19px;
+    z-index: 999;
+    position: absolute;
+    overflow: hidden;
+    opacity: 3.7;
+}
+@media (max-width:736px)
+{
+    #example_filter{
+        margin-top: 0px;
+        margin-left: -100px;
+    }
+    div.dt-buttons
+    {
+        margin-right: 200px;
+    }
+    .sidebar-footer {
+    bottom: 0px;
+    clear: both;
+    display: block;
+    padding: 5px 0 0 0;
+    width: 230px;
+    background: none;
+}
+.modal-content
+{
+    margin-left: 70px;
+}
+}
+
